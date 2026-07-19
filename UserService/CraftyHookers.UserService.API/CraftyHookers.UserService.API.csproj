@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CraftyHookers.UserService.Application\CraftyHookers.UserService.Application.csproj" />
     <ProjectReference Include="..\CraftyHookers.UserService.Infrastructure\CraftyHookers.UserService.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\EmailService\CraftyHookers.EmailService.Infrastructure\CraftyHookers.EmailService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

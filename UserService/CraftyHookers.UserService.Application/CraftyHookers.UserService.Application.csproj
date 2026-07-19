@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CraftyHookers.UserService.Core\CraftyHookers.UserService.Core.csproj" />
+    <ProjectReference Include="..\..\EmailService\CraftyHookers.EmailService.Core\CraftyHookers.EmailService.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

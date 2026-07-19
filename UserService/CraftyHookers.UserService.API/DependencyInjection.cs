@@ -1,4 +1,5 @@
-﻿using CraftyHookers.UserService.Application;
+﻿using CraftyHookers.EmailService.Infrastructure;
+using CraftyHookers.UserService.Application;
 using CraftyHookers.UserService.Infrastructure;
 
 namespace CraftyHookers.UserService.API
@@ -8,7 +9,8 @@ namespace CraftyHookers.UserService.API
         public static IServiceCollection AddHookerApiDI(this IServiceCollection services)
         {
             services.AddApplicationDI()
-                .AddInfrastructureDI();
+                .AddInfrastructureDI()
+                .AddEmailServiceInfrastructureDI();
 
             return services;
         }

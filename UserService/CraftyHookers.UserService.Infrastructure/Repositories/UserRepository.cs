@@ -12,9 +12,9 @@ namespace CraftyHookers.UserService.Infrastructure.Repository
             return await context.Users.ToListAsync();
         }
 
-        public async Task<User?> GetUserByUserNameAsync(string userName)
+        public async Task<User?> GetUserByEmailAsync(string userName)
         {
-            return await context.Users.Where(u => u.UserName == userName).FirstOrDefaultAsync();
+            return await context.Users.Where(u => u.Email == userName).FirstOrDefaultAsync();
         }
 
         public async Task<User?> UpdateUserAsync(Guid userId, User user)
@@ -22,7 +22,7 @@ namespace CraftyHookers.UserService.Infrastructure.Repository
             var u = await context.Users.Where(u => u.UserId == userId).FirstOrDefaultAsync();
             if (u != null)
             {
-                u.UserName = user.UserName;
+                u.Email = user.Email;
                 await context.SaveChangesAsync();
             }
             return u;

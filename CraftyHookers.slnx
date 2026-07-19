@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/EmailService/">
+    <Project Path="EmailService/CraftyHookers.EmailService.Core/CraftyHookers.EmailService.Core.csproj" />
+    <Project Path="EmailService/CraftyHookers.EmailService.Infrastructure/CraftyHookers.EmailService.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/UserService/">
     <Project Path="UserService/CraftyHookers.UserService.Core/CraftyHookers.UserService.Core.csproj" />
     <Project Path="UserService/CraftyHookers.UserService.API/CraftyHookers.UserService.API.csproj" />
@@ -6,6 +10,7 @@
     <Project Path="UserService/CraftyHookers.UserService.Infrastructure/CraftyHookers.UserService.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/UserService/Tests/">
+    <Project Path="UserService/Tests/CraftyHookers.UserService.Application.Tests/CraftyHookers.UserService.Application.Tests.csproj" />
     <Project Path="UserService/Tests/CraftyHookers.UserService.Infrastructure.Tests/CraftyHookers.UserService.Infrastructure.Tests.csproj" />
   </Folder>
 </Solution>
