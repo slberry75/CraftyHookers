@@ -2,6 +2,7 @@
 using CraftyHookers.UserService.Core.Entities;
 using CraftyHookers.UserService.Core.Repositories;
 using CraftyHookers.UserService.Core.Security;
+using CraftyHookers.UserService.Core.Validation;
 using MediatR;
 
 namespace CraftyHookers.UserService.Application.Commands
@@ -13,6 +14,11 @@ namespace CraftyHookers.UserService.Application.Commands
     {
         public async Task<User> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
+            if (!EmailValidator.IsValid(request.user.Email))
+            {
+                throw new ArgumentException($"'{request.user.Email}' is not a valid email address.", nameof(User.Email));
+            }
+
             if (String.IsNullOrEmpty(request.user.DisplayName))
             {
                 request.user.DisplayName = request.user.Email;

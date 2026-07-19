@@ -1,8 +1,8 @@
 ﻿namespace CraftyHookers.UserService.API.Models
 {
-    public class RegistrationDto
+    public class LoginDto
     {
         public required string Email { get; set; }
-        public string? DisplayName { get; set; }
+        public required string Password { get; set; }
     }
 }

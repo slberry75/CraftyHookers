@@ -12,9 +12,9 @@ namespace CraftyHookers.UserService.Infrastructure.Repository
             return await context.Users.ToListAsync();
         }
 
-        public async Task<User?> GetUserByEmailAsync(string userName)
+        public async Task<User?> GetUserByEmailAsync(string Email)
         {
-            return await context.Users.Where(u => u.Email == userName).FirstOrDefaultAsync();
+            return await context.Users.Where(u => u.Email == Email).FirstOrDefaultAsync();
         }
 
         public async Task<User?> UpdateUserAsync(Guid userId, User user)
